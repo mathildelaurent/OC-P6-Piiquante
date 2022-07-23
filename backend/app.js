@@ -27,15 +27,6 @@ app.use(express.json());
 app.use(helmet());
 app.use(limiter);
 
-/*
-app.get("/", (req, res) => {
-  res.status(200).json({
-    status: "success",
-    message: "Hello from the express server"
-  });
-});
-*/
-
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Accept, Content, Content-type, Authorization');
